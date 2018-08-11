@@ -1,1 +1,11 @@
 <h1>Express starter</h1>
+
+ {{#if user}}
+Logged in as: <strong>{{user.username}}</strong>
+<div>   
+    <a href="/logout">Logout</a>
+</div>
+{{else}}
+    <a href="/auth/github">Login</a>
+{{/if}}
+
