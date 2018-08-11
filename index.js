@@ -1,8 +1,14 @@
 const express = require('express');
-
-const app = express();
 const exphbs  = require('express-handlebars');
 const bodyParser = require('body-parser');
+const session = require('express-session');
+const app = express();
+
+app.use(session({
+    secret: 'keyboard cat5 run all 0v3r',
+    resave: false,
+    saveUninitialized: true
+  }))
 
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
