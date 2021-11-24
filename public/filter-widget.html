@@ -1,14 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Filter widget</title>
-	<link rel="stylesheet" href="style.css">
-
-</head>
-<body>
-	<h1>Filter widget</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Filter widget</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.4.2/handlebars.js"
+      integrity="sha256-hSzapznWRy/aOZkctlN03an9DxCLlN8ZCQS0lxntiHg="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"
+      integrity="sha256-S1J4GVHHDMiirir9qsXWc8ZWw74PHHafpsHp5PXtjTs="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <h1>Filter widget</h1>
+    <div class="filter">
+      <div>
+        <label for="color-options">Select color: </label>
+        <select name="color-options" class="color-options"></select>
+      </div>
+      <div>
+        <label for="brand-options">Select brand: </label>
+        <select name="brand-options" class="brand-options"></select>
+      </div>
+      <input type="button" value="filter" class="filter-btn" />
+    </div>
+    <div class="cars"></div>
+  </body>
+  <script src="filter-widget.js" charset="utf-8"></script>
+  <script type="text/x-template" id="options_template">
+    <option></option>
+              {{#each options}}
+              <option value={{this}}>{{this}}</option>
+              {{/each}}
+  </script>
+  <script type="text/x-template" id="cars_template">
+    	<table>
+    		<tr>
+       <th>Make</th>
+       <th>Model</th>
+       <th>Color</th>
+       <th>Price</th>
+       <th>Registration number</th>
+     </tr>
+    {{#each cars}}
+     <tr>
+       <td>{{this.make}}</td>
+       <td>{{this.model}}</td>
+       <td>{{this.color}}</td>
+       <td>R{{this.price}}</td>
+       <td>{{this.reg_number}}</td>
+     </tr>
+    {{/each}}
+    	</table>
+  </script>
 </html>
