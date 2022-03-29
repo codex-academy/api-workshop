@@ -2,17 +2,9 @@
 
 ## Setup
 
-Fork & clone this repository from GitHub
+Create a new folder called `cars-api-widget` - deploy it using GitHub pages. And shared the deployed URL with `gwi-mentors@projectcodex.co`
 
-In the project folder do:
-
-* `npm install`
-* `npm start`
-
-The app should be available at : `http://localhost:3010`
-
-
-## todo
+## Todo
 
 Using the data available via the API at: https://github.com/avermeulen/api-tutor
 
