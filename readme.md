@@ -24,7 +24,7 @@ Create a page that displays three lists:
 
 Use the data from the API calls from [api-tutor](https://github.com/avermeulen/api-tutor)
 
-> Create a new project called `cars-api-widget` - deploy it using GitHub pages. And shared the deployed URL with [gwi-mentors@projectcodex.co]()
+> Create a new project called `cars-api-widget` - deploy it using GitHub pages. And shared the deployed URL with [mentors@projectcodex.co]()
 
 ## A car filter widget
 
